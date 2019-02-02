@@ -5,12 +5,13 @@
 @section('content')
     <div class="m-b-md">
         Emails List :
-        <ul style="list-style-type:none;">
+        <ul class="list-group" style="list-style-type:none;">
             @foreach( $emailsCollection as $email)
-                <li>{{$email['email']}} <button class="btn btn-default send-joke" data-email="{{$email['email']}}" >Send Joke</button></li>
+                <li class="list-group-item">{{$email['email']}} <button class="btn btn-default send-joke float-right" data-email="{{$email['email']}}" >Send Joke</button></li>
             @endforeach
-                <li><button class="btn btn-default send-jokes" data-emails="{{$emailsCollection->implode('email', ',')}}" >Send Joke to all</button></li>
         </ul>
+        <button class="btn btn-default send-jokes" data-emails="{{$emailsCollection->implode('email', ',')}}" >Send Joke to All Emails</button> or
+        <a class="btn btn-default" href="{{url('/')}}" >Go Back</a>
     </div>
 @endsection
 
