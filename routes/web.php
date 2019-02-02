@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'IndexController@emailsForm');
+Route::get('/emails/listing', function () {
+    return redirect('/');
 });
+Route::post('/emails/listing', 'IndexController@emailsListing');
+Route::post('/send/email', 'IndexController@sendEmail');
