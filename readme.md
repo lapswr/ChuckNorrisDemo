@@ -33,3 +33,5 @@ MAIL_USERNAME=null
 MAIL_PASSWORD=null
 MAIL_ENCRYPTION=null
 ```
+
+For the email layout ive used this simple library https://github.com/leemunroe/responsive-html-email-template
